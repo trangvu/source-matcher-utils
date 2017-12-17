@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'source-matcher-utils'
+require 'source-matcher-utils/version'
+require 'thor'
+
+class SourceMatcherUtilsCommand < Thor
+  package_name 'SourceMatcherUtils'
+
+  desc 'matching', 'Match '
+  method_option 'external'
+  method_option 'external-col', default: 0
+  method_option 'crawler'
+  method_option 'crawler-col', default: 0
+  method_option 'source'
+  method_option 'source-col', default: 0
+  def matching
+    SourceMatcherUtils.new(options).matching
+  end
+
+  desc 'version', 'Prints version'
+  def version
+    puts SourceMatcherUtils::VERSION
+  end
+end
+
+SourceMatcherUtilsCommand.start
