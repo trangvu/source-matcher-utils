@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.executables   = 'source-matcher-utils'
   gem.files         = %w(source-matcher-utils.gemspec) +
     Dir['*.md', 'bin/*', 'lib/**/*.rb']
-  gem.homepage      = 'http://rubygems.org/gems/source-matcher-utils'
+  gem.homepage      = 'https://github.com/trangvu/source-matcher-utils'
   gem.name          = 'source-matcher-utils'
   gem.require_paths = %w(lib)
   gem.summary       = gem.description
